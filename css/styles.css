@@ -26,7 +26,7 @@ body {
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
-  color: #111;
+  color: #111111;
 }
 
 .accent-color {
@@ -60,7 +60,6 @@ body {
 /* ============= /Header Styles =============*/
 
 /* ============= Hero Styles =============*/
-
 .hero-section {
   background: #1e1823;
 }
@@ -160,3 +159,73 @@ body {
   letter-spacing: -0.02em;
 }
 /* ============= /How-Made Styles =============*/
+
+/* ============= Reviews Styles =============*/
+.reviews-list-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.reviews-list-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.reviews-button {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.reviews-button:hover,
+.reviews-button:focus {
+  background: #fd9222;
+  color: #ffffff;
+}
+/* ============= /Reviews Styles =============*/
+
+/* ============= Footer Styles =============*/
+.page-footer {
+  background: #1e1823;
+}
+.page-footer-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21429;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.contacts-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contacts-list-link {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contacts-list-link:hover,
+.contacts-list-link:focus {
+  color: #fd9222;
+}
+
+.footer-nav-link {
+  color: #fafafa;
+}
+/* ============= /Footer Styles =============*/
