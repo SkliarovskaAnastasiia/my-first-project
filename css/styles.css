@@ -2,6 +2,20 @@
 ul,
 ol {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
@@ -32,18 +46,46 @@ body {
 .accent-color {
   color: #fd9222;
 }
+
+.container {
+  max-width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
 /* ============= /Comon Styles =============*/
 
 /* ============= Header Styles =============*/
+.page-header {
+  margin: 28px 0;
+}
+
+.page-header .container {
+  display: flex;
+}
+
 .page-logo {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+  margin-right: 631px;
 }
 
 .page-logo-part {
   font-style: italic;
+}
+
+.nav-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .nav-link {
@@ -62,6 +104,17 @@ body {
 /* ============= Hero Styles =============*/
 .hero-section {
   background: #1e1823;
+  border-radius: 30px;
+  /* width: 1200px; */
+  height: 600px;
+  margin-bottom: 72px;
+  /* margin: 0 auto 72px auto; */
+  padding-top: 381px;
+  padding-bottom: 40px;
+}
+
+.hero-section .container {
+  width: 1056px;
 }
 
 .main-title {
@@ -70,6 +123,8 @@ body {
   line-height: 1.21429;
   letter-spacing: -0.03em;
   color: #ffffff;
+  width: 484px;
+  margin-bottom: 32px;
 }
 
 .hero-button {
@@ -77,6 +132,11 @@ body {
   font-size: 14px;
   color: #ffffff;
   background-color: #fd9222;
+  margin-right: 14px;
+  border-radius: 100px;
+  padding: 14px 40px;
+  width: 144px;
+  border: none;
 }
 
 .hero-button:hover,
@@ -89,6 +149,11 @@ body {
   font-weight: 600;
   font-size: 14px;
   color: #ffffff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 14px 40px;
+  width: 183px;
+  margin-right: 637px;
 }
 
 .how-made-link:hover,
@@ -102,6 +167,7 @@ body {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #ffffff;
+  width: 78px;
 }
 
 .scroll-down-link:hover,
