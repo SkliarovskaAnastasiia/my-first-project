@@ -23,6 +23,10 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+}
+
 button {
   cursor: pointer;
 }
@@ -49,18 +53,37 @@ body {
 
 .container {
   max-width: 1168px;
-  padding: 0 16px;
-  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-paddings {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* ============= /Comon Styles =============*/
 
 /* ============= Header Styles =============*/
-.page-header {
-  margin: 28px 0;
-}
-
-.page-header .container {
+.page-nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page-logo {
@@ -68,12 +91,6 @@ body {
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 4px;
-  margin-right: 631px;
 }
 
 .page-logo-part {
@@ -82,13 +99,13 @@ body {
 
 .nav-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
   gap: 24px;
 }
 
 .nav-link {
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 28px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -103,40 +120,49 @@ body {
 
 /* ============= Hero Styles =============*/
 .hero-section {
+  max-width: 1200px;
   background: #1e1823;
   border-radius: 30px;
-  /* width: 1200px; */
-  height: 600px;
-  margin-bottom: 72px;
-  /* margin: 0 auto 72px auto; */
-  padding-top: 381px;
-  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-section .container {
-  width: 1056px;
+.hero-container {
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
 }
 
 .main-title {
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 1.21429;
-  letter-spacing: -0.03em;
-  color: #ffffff;
   width: 484px;
   margin-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.hero-links-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .hero-button {
-  font-weight: 600;
-  font-size: 14px;
-  color: #ffffff;
-  background-color: #fd9222;
+  min-width: 144px;
+  height: 45px;
   margin-right: 14px;
   border-radius: 100px;
   padding: 14px 40px;
   width: 144px;
   border: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #fd9222;
 }
 
 .hero-button:hover,
@@ -146,14 +172,19 @@ body {
 }
 
 .how-made-link {
+  min-width: 183px;
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
   font-size: 14px;
+  text-align: center;
   color: #ffffff;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 100px;
-  padding: 14px 40px;
-  width: 183px;
-  margin-right: 637px;
 }
 
 .how-made-link:hover,
@@ -167,7 +198,7 @@ body {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #ffffff;
-  width: 78px;
+  margin-left: auto;
 }
 
 .scroll-down-link:hover,
@@ -178,29 +209,89 @@ body {
 
 /* ============= Benefits Styles =============*/
 .benefits-section {
+  margin-top: 72px;
+  margin-bottom: 50px;
   background-color: #1e1823;
+}
+
+.benefits-container {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 70px;
+}
+
+.benefits-list-item {
+  width: calc((100% - 140px) / 3);
 }
 
 .benefits-list-title {
   font-weight: 600;
   font-size: 18px;
-  color: #fff;
+  color: #ffffff;
+  margin-bottom: 18px;
 }
 
 .benefits-list-text {
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.29;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.7);
 }
 /* ============= /Benefits Styles =============*/
 
 /* ============= Ingredients Styles =============*/
+.ingredients-section-title {
+  width: 411px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
+}
+
 .ingredients-description {
+  width: 486px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
   text-align: center;
+}
+
+.ingredients-list {
+  display: flex;
+  gap: 19px;
+}
+
+.ingredients-list-item {
+  width: calc((100% - 57px) / 4);
+  padding: 28px 32px;
+  border: 1px solid #fd9222;
+  border-radius: 15px;
+}
+
+.ingredients-list-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.ingredients-list-item:nth-child(4n + 1) {
+  background-color: #fd9222;
+  color: #ffffff;
+}
+
+.ingredients-list-item:nth-child(4n + 3) {
+  background-color: #1e1823;
+  border-color: #1e1823;
+  color: #ffffff;
+}
+
+.ingredients-list-img {
+  margin-bottom: 36px;
 }
 
 .ingredients-list-title {
