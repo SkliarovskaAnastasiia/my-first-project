@@ -40,7 +40,7 @@ body {
 .section-title {
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
@@ -304,7 +304,29 @@ body {
 /* ============= /Ingredients Styles =============*/
 
 /* ============= How-Made Styles =============*/
+.how-made-section-title {
+  margin-bottom: 50px;
+}
+
+.how-made-content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.how-made-list {
+  padding-right: 27px;
+}
+
+.how-made-text-wrapper {
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
 .how-made-title {
+  max-width: 350px;
+  margin-bottom: 28px;
+
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -315,14 +337,48 @@ body {
   line-height: 1.29;
   letter-spacing: -0.02em;
 }
+
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
 /* ============= /How-Made Styles =============*/
 
 /* ============= Reviews Styles =============*/
+.reviews-section {
+  padding-bottom: 100px;
+}
+
+.reviews-title {
+  margin-bottom: 50px;
+}
+
+.reviews-list {
+  display: flex;
+  gap: 28px;
+}
+
+.reviews-list-item {
+  padding: 24px;
+  margin-bottom: 50px;
+  width: calc((100% - 56px) / 3);
+  background-color: #ffffff;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+}
+
+.reviews-list-img {
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .reviews-list-title {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .reviews-list-text {
@@ -334,8 +390,16 @@ body {
 }
 
 .reviews-button {
+  display: block;
+  min-width: 222px;
+  padding: 14px 40px;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 600;
   font-size: 18px;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  background-color: #ffffff;
 }
 
 .reviews-button:hover,
@@ -348,13 +412,24 @@ body {
 /* ============= Footer Styles =============*/
 .page-footer {
   background: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #ffffff;
 }
+
+.footer-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 54px;
+  border-bottom: solid rgba(255, 255, 255, 0.1);
+}
+
 .page-footer-title {
+  max-width: 300px;
   font-weight: 500;
   font-size: 28px;
-  line-height: 1.21429;
+  line-height: 1.21;
   letter-spacing: -0.02em;
-  color: #ffffff;
 }
 
 .contacts {
@@ -365,16 +440,17 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
-  text-align: center;
-  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.contacts-list-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .contacts-list-link {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
-  text-align: center;
-  color: #ffffff;
 }
 
 .contacts-list-link:hover,
@@ -382,7 +458,4 @@ body {
   color: #fd9222;
 }
 
-.footer-nav-link {
-  color: #fafafa;
-}
 /* ============= /Footer Styles =============*/
