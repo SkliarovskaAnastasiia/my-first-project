@@ -304,6 +304,29 @@ body {
 
 .benefits-list-item {
   width: calc((100% - 140px) / 3);
+  position: relative;
+}
+
+.benefits-list-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  height: 50%;
+  width: 1px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.benefits-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin-bottom: 22px;
 }
 
 .benefits-list-title {
@@ -370,13 +393,14 @@ body {
   border-radius: 15px;
   padding: 20px;
   color: #111111;
+  overflow: auto;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-list-title {
@@ -387,6 +411,30 @@ body {
   color: #111111;
 
   margin-bottom: 8px;
+}
+
+.overlay-categories {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlay-category {
+  padding: 6px 16px;
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  font-size: 10px;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+
+.overlay-category-primery {
+  background: #fd9222;
+  color: #ffffff;
+}
+
+.overlay-category-secondary {
+  background-color: #fafafa;
 }
 
 .overlay-text {
@@ -431,7 +479,7 @@ body {
 }
 
 .how-made-list {
-  padding-right: 27px;
+  padding-right: 26px;
 }
 
 .how-made-text-wrapper {
@@ -450,13 +498,28 @@ body {
 }
 
 .how-made-list-item {
+  position: relative;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  padding-left: 16px;
 }
 
 .how-made-list-item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.how-made-list-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
 }
 /* ============= /How-Made Styles =============*/
 
@@ -475,9 +538,10 @@ body {
 }
 
 .reviews-list-item {
-  padding: 24px;
+  padding: 56px 24px 24px;
   margin-bottom: 50px;
   width: calc((100% - 56px) / 3);
+  position: relative;
   background-color: #ffffff;
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
   border: 1px solid rgba(17, 17, 17, 0.1);
@@ -485,9 +549,10 @@ body {
 }
 
 .reviews-list-img {
-  margin-bottom: 18px;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .reviews-list-title {
@@ -517,6 +582,7 @@ body {
   border: 1px solid #fd9222;
   border-radius: 100px;
   background-color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reviews-button:hover,
