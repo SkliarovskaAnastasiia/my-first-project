@@ -56,8 +56,49 @@
             </a>
           </li>
         </ul>
+
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="28" height="28">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mob-menu" data-menu>
+        <div class="container mob-menu-container">
+          <button class="close-menu-btn" type="button" data-menu-close>
+            <svg class="close-menu-icon" width="28" height="28">
+              <use href="./images/sprite.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+
+          <nav class="mob-menu-nav">
+            <a class="mob-menu-nav-link current" href="./index.html">Home</a>
+            <a class="mob-menu-nav-link" href="#how-made">How it’s made?</a>
+            <a class="mob-menu-nav-link" href="#reviews">Chocolate is loved</a>
+          </nav>
+
+          <ul class="mob-menu-social-list">
+            <li class="mob-menu-social-list-item">
+              <a href="" class="mob-menu-social-link">
+                <svg class="mob-menu-social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-menu-social-list-item">
+              <a href="" class="mob-menu-social-link">
+                <svg class="mob-menu-social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
+
     <main>
       <!-- Hero Section -->
       <section class="hero-section">
@@ -81,7 +122,7 @@
       </section>
 
       <!-- Our Benefits Section-->
-      <section class="benefits-section section-paddings" id="benefits">
+      <section class="benefits-section section-paddings hidden" id="benefits">
         <div class="container benefits-container">
           <h2 class="visually-hidden">Our Benefits</h2>
           <ul class="benefits-list">
@@ -129,7 +170,7 @@
       </section>
 
       <!-- Ingredients Section -->
-      <section class="ingredients-section section-paddings">
+      <section class="ingredients-section section-paddings hidden">
         <div class="container">
           <h2 class="section-title ingredients-section-title">
             It all adds up to one exceptional
@@ -237,7 +278,7 @@
       </section>
 
       <!-- How it's made section -->
-      <section class="how-made-section section-paddings" id="how-made">
+      <section class="how-made-section section-paddings hidden" id="how-made">
         <div class="container">
           <h2 class="section-title how-made-section-title">How it's <span class="accent-color">made?</span></h2>
           <div class="how-made-content-wrapper">
@@ -270,7 +311,7 @@
       </section>
 
       <!-- Reviews Section -->
-      <section class="reviews-section section-paddings" id="reviews">
+      <section class="reviews-section section-paddings hidden" id="reviews">
         <div class="container">
           <h2 class="section-title reviews-title"><span class="accent-color">Chocolate</span> is loved</h2>
           <ul class="reviews-list">
@@ -308,7 +349,7 @@
     </main>
 
     <!-- Page Footer -->
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container">
         <div class="footer-content-wrapper">
           <h2 class="page-footer-title"><span class="accent-color">Chocolate</span> a delicious cure for a bad day</h2>
@@ -341,7 +382,7 @@
     </footer>
 
     <!-- Modal -->
-    <div class="modal-backdrop" data-modal>
+    <div class="modal-backdrop hidden" data-modal>
       <div class="modal">
         <button class="close-btn" type="button" data-modal-close>
           <svg class="close-btn-icon" width="28" height="28">
@@ -410,5 +451,6 @@
       </div>
     </div>
     <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/menu.js"></script>
   </body>
 </html>
