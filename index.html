@@ -278,17 +278,33 @@
       </section>
 
       <!-- How it's made section -->
-      <section class="how-made-section section-paddings hidden" id="how-made">
-        <div class="container">
+      <section class="how-made-section section-paddings" id="how-made">
+        <div class="container how-made-container">
           <h2 class="section-title how-made-section-title">How it's <span class="accent-color">made?</span></h2>
           <div class="how-made-content-wrapper">
-            <img
-              class="how-made-img"
-              src="./images/how-made/how-made.jpg"
-              alt="Proces of making chocolate"
-              width="600"
-              height="400"
-            />
+            <picture>
+              <source
+                srcset="./images/how-made/how-made-desktop.jpg 1x, ./images/how-made/how-made-desktop@2x.jpg 2x"
+                media="(min-width: 1168px)"
+              />
+              <source
+                srcset="./images/how-made/how-made-tablet.jpg 1x, ./images/how-made/how-made-tablet@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/how-made/how-made-mobile.jpg 1x, ./images/how-made/how-made-mobile@2x.jpg 2x"
+                media="(max-width: 767px)"
+              />
+
+              <img
+                class="how-made-img"
+                src="./images/how-made/how-made-mobile.jpg"
+                alt="Proces of making chocolate"
+                width="600"
+                height="400"
+              />
+            </picture>
+
             <div class="how-made-text-wrapper">
               <h3 class="how-made-title">Try our chocolates today and discover the perfect balance of flavor</h3>
               <ul class="how-made-list">
@@ -311,7 +327,7 @@
       </section>
 
       <!-- Reviews Section -->
-      <section class="reviews-section section-paddings hidden" id="reviews">
+      <section class="reviews-section section-paddings" id="reviews">
         <div class="container">
           <h2 class="section-title reviews-title"><span class="accent-color">Chocolate</span> is loved</h2>
           <ul class="reviews-list">
@@ -349,7 +365,7 @@
     </main>
 
     <!-- Page Footer -->
-    <footer class="page-footer hidden">
+    <footer class="page-footer">
       <div class="container">
         <div class="footer-content-wrapper">
           <h2 class="page-footer-title"><span class="accent-color">Chocolate</span> a delicious cure for a bad day</h2>
@@ -378,6 +394,11 @@
             </li>
           </ul>
         </nav>
+
+        <form class="subscribe-form">
+          <input class="subscribe-input" type="email" name="user-email" placeholder="Enter your email" />
+          <button class="subscribe-btn" type="submit">Subscribe</button>
+        </form>
       </div>
     </footer>
 
