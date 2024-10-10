@@ -3,53 +3,7 @@
 /* ============= /Reviews Styles =============*/
 
 /* ============= Footer Styles =============*/
-.page-footer {
-  background: #1e1823;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: #ffffff;
-}
 
-.footer-content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 54px;
-  border-bottom: solid rgba(255, 255, 255, 0.1);
-}
-
-.page-footer-title {
-  max-width: 300px;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 1.21;
-  letter-spacing: -0.02em;
-}
-
-.contacts {
-  font-style: normal;
-}
-
-.contacts-text {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29;
-  margin-bottom: 14px;
-}
-
-.contacts-list-item:not(:last-child) {
-  margin-bottom: 4px;
-}
-
-.contacts-list-link {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
-}
-
-.contacts-list-link:hover,
-.contacts-list-link:focus {
-  color: #fd9222;
-}
 /* ============= /Footer Styles =============*/
 
 /* ============= Modal Styles =============*/
