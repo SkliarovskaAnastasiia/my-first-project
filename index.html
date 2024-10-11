@@ -330,6 +330,25 @@
       <section class="reviews-section section-paddings" id="reviews">
         <div class="container">
           <h2 class="section-title reviews-title"><span class="accent-color">Chocolate</span> is loved</h2>
+          <input
+            class="slider slider-first visually-hidden"
+            type="radio"
+            id="reviews-slider-first"
+            name="reviews-slider"
+            checked
+          />
+          <input
+            class="slider slider-second visually-hidden"
+            type="radio"
+            id="reviews-slider-second"
+            name="reviews-slider"
+          />
+          <input
+            class="slider slider-third visually-hidden"
+            type="radio"
+            id="reviews-slider-third"
+            name="reviews-slider"
+          />
           <ul class="reviews-list">
             <li class="reviews-list-item">
               <img
@@ -357,6 +376,25 @@
                 Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside.
                 The wafer is soft but crunchy.
               </p>
+            </li>
+          </ul>
+          <ul class="review-slider-list">
+            <li class="review-slider-item">
+              <label class="slider-label" for="reviews-slider-first">
+                <span class="custom-slider custom-slider-first"></span>
+              </label>
+            </li>
+
+            <li class="review-slider-item">
+              <label class="slider-label" for="reviews-slider-second">
+                <span class="custom-slider custom-slider-second"></span>
+              </label>
+            </li>
+
+            <li class="review-slider-item">
+              <label class="slider-label" for="reviews-slider-third">
+                <span class="custom-slider custom-slider-third"></span>
+              </label>
             </li>
           </ul>
           <button class="reviews-button" type="button" data-modal-open>Leave a review</button>

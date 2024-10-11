@@ -892,9 +892,12 @@ body {
   margin-bottom: 74px;
 }
 
+.reviews-list {
+  margin-bottom: 20px;
+}
+
 .reviews-list-item {
   padding: 56px 18px 18px;
-  margin-bottom: 65px;
   position: relative;
   background-color: #ffffff;
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
@@ -962,6 +965,52 @@ body {
   }
 }
 
+@media screen and (max-width: 1167px) {
+  .reviews-list-item {
+    display: none;
+  }
+
+  .review-slider-list {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin-bottom: 32px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .custom-slider {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgba(17, 17, 17, 0.1);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .slider-first:checked ~ .review-slider-list .custom-slider-first,
+  .slider-second:checked ~ .review-slider-list .custom-slider-second,
+  .slider-third:checked ~ .review-slider-list .custom-slider-third {
+    width: 28px;
+    height: 13px;
+    border-radius: 10px;
+    background-color: #fd9222;
+  }
+
+  .slider-first:checked ~ .reviews-list .reviews-list-item:nth-child(1) {
+    display: block;
+  }
+
+  .slider-second:checked ~ .reviews-list .reviews-list-item:nth-child(2) {
+    display: block;
+  }
+
+  .slider-third:checked ~ .reviews-list .reviews-list-item:nth-child(3) {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1168px) {
   .reviews-section {
     padding-bottom: 100px;
@@ -969,7 +1018,8 @@ body {
 
   .reviews-list {
     display: flex;
-    gap: 28px;
+    column-gap: 28px;
+    margin-bottom: 0;
   }
 
   .reviews-list-item {
